@@ -1,5 +1,6 @@
 import time
-
+import allure
+import pytest
 # import sys
 # sys.path.insert(0,"C:\Users\user\PycharmProjects\Mini_Project_Selenium\Atid_Store\Base_Tast\Locators.py")
 from Atid_Store.Base_Tast.Locators import *
@@ -9,7 +10,9 @@ from selenium.webdriver.common.by import By
 from webdriver_manager.chrome import ChromeDriverManager
 driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()))
 # @pytest.mark.Skip
+@allure.description("")
 def test_store_product():
+
     driver.get(locator)
     driver.maximize_window()
     driver.find_element(By.XPATH, locator1).click()

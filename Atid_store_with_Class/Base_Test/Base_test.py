@@ -1,16 +1,23 @@
 from selenium.webdriver.common.by import By
 from selenium import webdriver
+from selenium.webdriver.chrome.service import Service as ChromeService
 from selenium.webdriver.remote.webelement import WebElement
-from selenium.webdriver.support import expected_conditions as e_c
 from selenium.webdriver.support.wait import WebDriverWait
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support import expected_conditions as e_c
+# from selenium.webdriver import Keys
+# from selenium.webdriver.support import expected_conditions as EC
+from webdriver_manager.chrome import ChromeDriverManager
 
+driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()))
+# driver1 = webdriver.Chrome()
 
 class BaseTest():
-    # _driver = webdriver.Chrome()
-    from selenium import webdriver
-    from selenium.webdriver.chrome.service import Service as ChromeService
-    from webdriver.chrome import ChromeDriverManager
+
+
     driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()))
+    # _driver = webdriver.Chrome()
+
     def _find(self, by, locate) -> WebElement:
         return self.driver.find_element(by, locate)
 

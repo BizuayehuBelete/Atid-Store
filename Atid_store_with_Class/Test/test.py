@@ -1,4 +1,4 @@
-from Atid_store_with_Class.page.page_tests import AtidStore_page
+from page.page_tests import AtidStore_page
 
 
 class Test_posetive(AtidStore_page):

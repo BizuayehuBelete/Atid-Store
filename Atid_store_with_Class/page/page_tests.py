@@ -1,6 +1,6 @@
 from selenium.webdriver.common.by import By
-from Atid_store.Base_Test.Base_test import *
-from Atid_store.Locators.locators import *
+from Base_Test.Base_test import *
+from Locators.locators import *
 
 
 class AtidStore_page(BaseTest, Locators):
